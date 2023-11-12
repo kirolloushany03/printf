@@ -47,7 +47,7 @@ int print_character(va_list arg, printF_t *print);
 
 int print_percent(va_list arg, printF_t *print);
 
-int (*get_prints(char str))(va_list, printF_t);
+int (*get_prints(char str))(va_list, printF_t*);
 int get_flags(char ch, printF_t *printF);
 void print_num(int num);
 
