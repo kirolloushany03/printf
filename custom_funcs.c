@@ -2,7 +2,7 @@
 
 /**
  * _putchar - writes the character
- * @c: an input char to print
+ * @ch: an input char to print
  * Descroption: custom putchar that creates temporary buffer
  * when i equals to buffer, ch equals to -1 it's time to flush buffer
  * else, store character in the buffer.
@@ -31,7 +31,7 @@ int _putchar(char ch)
  * @str: an input string to print
  * Return: number of characters printed.
 */
-int _puts(char* str)
+int _puts(char *str)
 {
 	register int32_t i = 0;
 
@@ -48,7 +48,7 @@ int _puts(char* str)
  * @str: an input string.
  * Return: length of a string.
  */
-int _strlen(char* str)
+int _strlen(char *str)
 {
 	int32_t i = 0;
 
