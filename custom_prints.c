@@ -81,6 +81,11 @@ int print_binary(va_list arg, printF_t *print)
 	int32_t leadingZeroes = 1;
 	int32_t i = 31, bit, count = 0;
 
+	if (!value)
+	{
+		_putchar('0');
+		return (1);
+	}
 	(void)print;
 	while (i >= 0)
 	{
