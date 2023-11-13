@@ -68,3 +68,31 @@ int print_percent(va_list arg, printF_t *print)
 	(void)print;
 	return (_putchar('%'));
 }
+
+/**
+ * print_binary - print in binary code.
+ * @arg: an input argument to print.
+ * @print: an input struct for flags.
+ * Return: number of printed characters.
+ */
+int print_binary(va_list arg, printF_t *print)
+{
+	uint32_t value = va_arg(arg, uint32_t);
+	int32_t leadingZeroes = 1;
+	int32_t i = 31, bit, count = 0;
+
+	(void)print;
+	while (i >= 0)
+	{
+		bit = (value >> i) & 1;
+		if (bit || !leadingZeroes)
+		{
+			_putchar(bit + '0');
+			leadingZeroes = 0;
+			count++;
+		}
+		i--;
+	}
+
+	return (count);
+}

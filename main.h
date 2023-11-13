@@ -44,7 +44,7 @@ int _printf(const char *format, ...);
 int print_integer(va_list arg, printF_t *print);
 int print_string(va_list arg, printF_t *print);
 int print_character(va_list arg, printF_t *print);
-
+int print_binary(va_list arg, printF_t *print);
 int print_percent(va_list arg, printF_t *print);
 
 int (*get_prints(char str))(va_list, printF_t*);
