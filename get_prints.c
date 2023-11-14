@@ -18,11 +18,15 @@ int (*get_prints(char str))(va_list, printF_t *)
 		{'c', print_character},
 		{'d', print_integer},
 		{'i', print_integer},
-		{'%', print_percent},
 		{'b', print_binary},
+		{'u', print_unsigned},
+		{'x', print_hex},
+		{'X', print_hex_upper},
+		{'o', print_octal},
+		{'%', print_percent}
 	};
 
-	int flags = 14;
+	int flags = sizeof(funcs) / sizeof(funcs[0]);
 	int i;
 
 	for (i = 0; i < flags; i++)
