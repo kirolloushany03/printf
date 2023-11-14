@@ -44,6 +44,7 @@ int print_unsigned(va_list arg, printF_t *print)
 
 	buffer[19] = '\0';
 
+	(void)print;
 	while (num > 0)
 	{
 		buffer[--index] = (num % 10) + '0';

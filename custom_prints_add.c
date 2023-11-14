@@ -9,7 +9,7 @@
 int print_octal(va_list args, printF_t *printF)
 {
 	uint32_t num = va_arg(args, uint32_t);
-	int32_t printed_nums = 0, i, j;
+	int32_t printed_nums = 0, i, j, size;
 	char buffer[HASH_BUFF_SIZE];
 
 	if (!num)
@@ -30,7 +30,9 @@ int print_octal(va_list args, printF_t *printF)
 		num /= 8;
 	}
 
-	for (j = i + 1; j < sizeof(buffer); j++)
+	size = sizeof(buffer);
+
+	for (j = i + 1; j < size; j++)
 	{
 		_putchar(buffer[j]);
 		printed_nums++;
